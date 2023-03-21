@@ -57,7 +57,7 @@ async def ping(e):
         start = datetime.now()
         text = "Pong!\n\nʜɪ ɢᴀʏ\nᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n**ᴄᴏᴍᴍᴀɴᴅꜱ:-**\n\n/banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n/unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n/kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!"
         BUTTON = [[Button.url("ᴜᴘᴅᴀᴛᴇꜱ", "https://t.me/SpotifyxUpdates"),]]
-        event = await e.send_file(text, buttons=BUTTON , NEO, parse_mode=None, link_preview=None )
+        event = await e.send_file(text, buttons=BUTTON , NEO, parse_mode=None, link_preview=None)
         end = datetime.now()
         ms = (end-start).microseconds / 1000
         await event.send_file(f"**ɪ'ᴍ ᴀʟɪᴠᴇ !!** \n\n **ᴘᴏɴɢ** !! `{ms}` ms\n\nʜɪ ɢᴀʏ\nᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n**ᴄᴏᴍᴍᴀɴᴅꜱ:-**\n\n/banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n/unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n/kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!")
