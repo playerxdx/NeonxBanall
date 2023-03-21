@@ -5,7 +5,6 @@ import sys
 import asyncio
 from telethon import TelegramClient, events
 import telethon.utils
-from telethon.tl import functions
 
 START = "https://telegra.ph/file/68d6d0c80c9bb02730e64.jpg"
 
