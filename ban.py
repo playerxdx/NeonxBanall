@@ -51,16 +51,16 @@ print("Starting.....")
 
 Riz = TelegramClient('Riz', Var.API_ID, Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
 
-
+NEO = "https://telegra.ph/file/5a6643e48065bcc2d6e9a.jpg"
 @Riz.on(events.NewMessage(pattern="^/start"))  
 async def ping(e):
         start = datetime.now()
         text = "Pong!\n\nʜɪ ɢᴀʏ\nᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n**ᴄᴏᴍᴍᴀɴᴅꜱ:-**\n\n/banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n/unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n/kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!"
         BUTTON = [[Button.url("ᴜᴘᴅᴀᴛᴇꜱ", "https://t.me/SpotifyxUpdates"),]]
-        event = await e.reply(text, buttons=BUTTON , parse_mode=None, link_preview=None )
+        event = await e.send_file(text, buttons=BUTTON , NEO, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**ɪ'ᴍ ᴀʟɪᴠᴇ !!** \n\n **ᴘᴏɴɢ** !! `{ms}` ms\n\nʜɪ ɢᴀʏ\nᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n**ᴄᴏᴍᴍᴀɴᴅꜱ:-**\n\n/banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n/unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n/kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!")
+        await event.send_file(f"**ɪ'ᴍ ᴀʟɪᴠᴇ !!** \n\n **ᴘᴏɴɢ** !! `{ms}` ms\n\nʜɪ ɢᴀʏ\nᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n**ᴄᴏᴍᴍᴀɴᴅꜱ:-**\n\n/banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n/unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n/kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!")
 
 
 @Riz.on(events.NewMessage(pattern="^/kickall"))
