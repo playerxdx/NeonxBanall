@@ -56,14 +56,14 @@ async def start(e):
         text = "ʜɪ ɢᴀʏ [{event.sender.first_name}](tg://user?id={event.sender.id}), ᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n **ᴄᴏᴍᴍᴀɴᴅꜱ**\n\n /ping - ᴄʜᴇᴄᴋ ʙᴏᴛꜱ ᴜᴘᴛɪᴍᴇ ! \n /banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n /unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n\ /kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!"
         BUTTON = [[Button.url("ᴜᴘᴅᴀᴛᴇꜱ", "https://t.me/SpotifyxUpdates"),]]
 
-@Riz.on(events.NewMessage(pattern="^/ping"))  
+@Riz.on(events.NewMessage(pattern="^/ping" "/start"))  
 async def ping(e):
         start = datetime.now()
         text = "Pong!"
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**I'm On** \n\n __Pong__ !! `{ms}` ms")
+        await event.edit(f"**I'm On** \n\n __Pong__ !! `{ms}` ms\n\n ʜɪ ɢᴀʏ [{event.sender.first_name}](tg://user?id={event.sender.id}), ᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n **ᴄᴏᴍᴍᴀɴᴅꜱ**\n\n /ping - ᴄʜᴇᴄᴋ ʙᴏᴛꜱ ᴜᴘᴛɪᴍᴇ ! \n /banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n /unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n\ /kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!")
 
 
 @Riz.on(events.NewMessage(pattern="^/kickall"))
