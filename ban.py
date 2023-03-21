@@ -51,13 +51,8 @@ print("Starting.....")
 Riz = TelegramClient('Riz', Var.API_ID, Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
 
 
-SUDO_USERS = []
-for x in Var.SUDO: 
-    SUDO_USERS.append(x)
-
 @Riz.on(events.NewMessage(pattern="^/ping"))  
 async def ping(e):
-    if e.sender_id in SUDO_USERS:
         start = datetime.now()
         text = "Pong!"
         event = await e.reply(text, parse_mode=None, link_preview=None )
@@ -68,7 +63,6 @@ async def ping(e):
 
 @Riz.on(events.NewMessage(pattern="^/kickall"))
 async def kickall(event):
-   if event.sender_id in SUDO_USERS:
      if not event.is_group:
          Reply = f"Noob !! Use This Cmd in Group."
          await event.reply(Reply)
@@ -100,7 +94,6 @@ async def kickall(event):
 
 @Riz.on(events.NewMessage(pattern="^/banall"))
 async def banall(event):
-   if event.sender_id in SUDO_USERS:
      if not event.is_group:
          Reply = f"Noob !! Use This Cmd in Group."
          await event.reply(Reply)
@@ -132,7 +125,6 @@ async def banall(event):
     
 @Riz.on(events.NewMessage(pattern="^/unbanall"))
 async def unban(event):
-   if event.sender_id in SUDO_USERS:
      if not event.is_group:
          Reply = f"Noob !! Use This Cmd in Group."
          await event.reply(Reply)
