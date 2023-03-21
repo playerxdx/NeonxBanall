@@ -56,7 +56,8 @@ Riz = TelegramClient('Riz', Var.API_ID, Var.API_HASH).start(bot_token=Var.BOT_TO
 async def ping(e):
         start = datetime.now()
         text = "Pong!\n\nʜɪ ɢᴀʏ\nᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n**ᴄᴏᴍᴍᴀɴᴅꜱ:-**\n\n/banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n/unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n/kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!"
-        event = await e.reply(text, parse_mode=None, link_preview=None )
+        Button = [[Button.url("ᴜᴘᴅᴀᴛᴇꜱ", "https://t.me/SpotifyxUpdates"),]]
+        event = await e.reply(text, Button , parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
         await event.edit(f"**ɪ'ᴍ ᴀʟɪᴠᴇ !!** \n\n **ᴘᴏɴɢ** !! `{ms}` ms\n\nʜɪ ɢᴀʏ\nᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n**ᴄᴏᴍᴍᴀɴᴅꜱ:-**\n\n/banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n/unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n/kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!")
