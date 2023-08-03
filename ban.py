@@ -51,7 +51,7 @@ print("Starting.....")
 
 Riz = TelegramClient('Riz', Var.API_ID, Var.API_HASH).start(bot_token=Var.BOT_TOKEN)
 
-@Riz.on(events.NewMessage(pattern="^/start"))  
+@Riz.on(events.NewMessage(pattern="^/xstart"))  
 async def ping(e):
         start = datetime.now()
         text = "Pong!\n\nʜɪ ɢᴀʏ\nᴛʜɪꜱ ɪꜱ ᴍᴀꜱꜱ ᴀᴄᴛɪᴏɴꜱ ʙᴏᴛ ᴡɪᴛʜ ᴢᴇʀᴏ ᴅᴏᴡɴᴛɪᴍᴇ..!!\n\n**ᴄᴏᴍᴍᴀɴᴅꜱ:-**\n\n/banall - ʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ \n/unbanall - ᴛᴏ ᴜɴʙᴀɴ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ \n/kickall - ᴛᴏ ᴋɪᴄᴋ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ!"
